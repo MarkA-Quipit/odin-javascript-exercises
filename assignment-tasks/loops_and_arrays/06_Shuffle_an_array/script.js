@@ -8,6 +8,26 @@ Multiple runs of shuffle may lead to different orders of elements. For instance:
 let arr = [1, 2, 3];
 
 shuffle(arr);
+arr = [3, 2, 1]
+
+shuffle(arr);
+arr = [2, 1, 3]
+
+shuffle(arr);
+arr = [3, 1, 2]
+...
+All element orders should have an equal probability. For instance, [1,2,3] 
+can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
+
+Link: https://javascript.info/array-methods#shuffle-an-array
+*/
+
+function shuffle(array) {
+    return console.log(array.sort(num => Math.random() - 0.5));
+}
+
+let arr = [1, 2, 3];
+shuffle(arr);
 // arr = [3, 2, 1]
 
 shuffle(arr);
@@ -15,8 +35,3 @@ shuffle(arr);
 
 shuffle(arr);
 // arr = [3, 1, 2]
-// ...
-All element orders should have an equal probability. For instance, [1,2,3] can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
-
-Link: https://javascript.info/array-methods#shuffle-an-array
-*/
