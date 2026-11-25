@@ -1,1 +1,0 @@
-https://javascript.info/array-methods#sort-in-decreasing-order
